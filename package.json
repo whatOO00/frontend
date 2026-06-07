@@ -8,6 +8,9 @@
   "version": "1.0.0",
   "scripts": {
     "build": "script/build_frontend",
+    "develop": "node script/develop.cjs",
+    "start-demo": "node demo/script/develop_demo",
+    "gallery": "node gallery/script/develop_gallery.cjs",
     "lint:eslint": "eslint \"**/src/**/*.{js,ts,html}\" --cache --cache-strategy=content --cache-location=node_modules/.cache/eslint/.eslintcache --ignore-pattern=.gitignore --max-warnings=0",
     "format:eslint": "eslint \"**/src/**/*.{js,ts,html}\" --cache --cache-strategy=content --cache-location=node_modules/.cache/eslint/.eslintcache --ignore-pattern=.gitignore --fix",
     "lint:prettier": "prettier . --cache --check",

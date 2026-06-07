@@ -63,41 +63,55 @@ const createRspackConfig = ({
     entry,
     node: false,
     module: {
-      rules: [
-        {
-          test: /\.m?js$|\.ts$/,
-          exclude: /node_modules[\\/]core-js/,
-          use: (info) => [
-            {
-              loader: "babel-loader",
-              options: {
-                ...bundle.babelOptions({
-                  latestBuild,
-                  isProdBuild,
-                  isTestBuild,
-                  sw: info.issuerLayer === "sw",
-                }),
-                cacheDirectory: !isProdBuild,
-                cacheCompression: false,
-              },
-            },
-            {
-              loader: "builtin:swc-loader",
-              options: bundle.swcOptions(),
-            },
-          ],
-          resolve: {
-            fullySpecified: false,
-          },
-          parser: {
-            worker: ["*context.audioWorklet.addModule()", "..."],
-          },
+     rules: [
+  {
+    test: /\.js$/,
+    include: [
+      /node_modules[\\/]deep-freeze/,
+      /node_modules[\\/]object-hash/,
+      /node_modules[\\/]leaflet/,
+      /node_modules[\\/]cropperjs/,
+      /node_modules[\\/]@braintree[\\/]sanitize-url/,
+      /node_modules[\\/]stacktrace-js/,
+    ],
+    resolve: {
+      fullySpecified: false,
+    },
+  },
+  {
+    test: /\.m?js$|\.ts$/,
+    exclude: /node_modules[\\/]core-js/,
+    use: (info) => [
+      {
+        loader: "babel-loader",
+        options: {
+          ...bundle.babelOptions({
+            latestBuild,
+            isProdBuild,
+            isTestBuild,
+            sw: info.issuerLayer === "sw",
+          }),
+          cacheDirectory: !isProdBuild,
+          cacheCompression: false,
         },
-        {
-          test: /\.css$/,
-          type: "asset/source",
-        },
-      ],
+      },
+      {
+        loader: "builtin:swc-loader",
+        options: bundle.swcOptions(),
+      },
+    ],
+    resolve: {
+      fullySpecified: false,
+    },
+    parser: {
+      worker: ["*context.audioWorklet.addModule()", "..."],
+    },
+  },
+  {
+    test: /\.css$/,
+    type: "asset/source",
+  },
+],
     },
     optimization: {
       minimizer: [
@@ -207,6 +221,12 @@ const createRspackConfig = ({
     resolve: {
       extensions: [".ts", ".js", ".json"],
       alias: {
+        "cropperjs": path.resolve(__dirname, "../src/shims/cropperjs.js"),
+        "@braintree/sanitize-url": path.resolve(__dirname, "../src/shims/sanitize-url.js"),
+        "stacktrace-js": path.resolve(__dirname, "../src/shims/stacktrace.js"),
+        "deep-freeze": path.resolve(__dirname, "../src/shims/deep-freeze.js"),
+        "object-hash": path.resolve(__dirname, "../src/shims/object-hash.js"),
+        "leaflet": path.resolve(__dirname, "../src/shims/leaflet.js"),
         "lit/static-html$": "lit/static-html.js",
         "lit/decorators$": "lit/decorators.js",
         "lit/directive$": "lit/directive.js",

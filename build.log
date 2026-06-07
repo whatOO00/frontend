@@ -1,0 +1,489 @@
+[16:25:22] Using gulpfile C:\Ha-test\frontend\gulpfile.js
+[16:25:22] Starting 'build-app'...
+[16:25:22] Starting 'setEnv'...
+[16:25:22] Finished 'setEnv' after 475 μs
+[16:25:22] Starting 'clean'...
+[16:25:22] Starting 'clean-translations'...
+[16:25:22] Starting '<anonymous>'...
+[16:25:22] Finished '<anonymous>' after 189 ms
+[16:25:22] Finished 'clean-translations' after 191 ms
+[16:25:22] Finished 'clean' after 192 ms
+[16:25:22] Starting 'gen-icons-json'...
+[16:25:22] Starting 'build-translations'...
+[16:25:22] Starting 'build-locale-data'...
+[16:25:22] Starting 'gen-licenses'...
+[16:25:23] Finished 'gen-icons-json' after 1.13 s
+[16:25:23] Starting 'clean-locale-data'...
+[16:25:23] Starting 'fetch-nightly-translations'...
+[16:25:23] Starting 'clean-translations'...
+[16:25:23] Finished 'clean-locale-data' after 1.41 ms
+[16:25:23] Starting 'create-locale-data'...
+[16:25:23] Finished 'clean-translations' after 1.77 ms
+[16:25:23] Starting 'makeWorkDir'...
+No token found so build will continue with English only
+[16:25:23] Finished 'fetch-nightly-translations' after 2.94 ms
+[16:25:23] Finished 'makeWorkDir' after 511 μs
+[16:25:23] Starting 'createTestTranslation'...
+[16:25:23] Finished 'createTestTranslation' after 161 μs
+[16:25:23] Starting 'createMasterTranslation'...
+[16:25:23] Finished 'createMasterTranslation' after 280 ms
+[16:25:23] Starting 'createTranslations'...
+[16:25:23] Finished 'create-locale-data' after 320 ms
+[16:25:23] Finished 'build-locale-data' after 1.45 s
+[16:25:24] Finished 'createTranslations' after 888 ms
+[16:25:24] Starting 'writeTranslationMetaData'...
+[16:25:24] Finished 'writeTranslationMetaData' after 4.1 ms
+[16:25:24] Finished 'build-translations' after 2.3 s
+[16:25:25] Finished 'gen-licenses' after 2.76 s
+[16:25:25] Starting 'copy-static-app'...
+[16:25:25] Finished 'copy-static-app' after 436 ms
+[16:25:25] Starting 'rspack-prod-app'...
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Build
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Build
+[babel-plugin-template-html-minifier] Could not minify CSS: Invalid character(s) 'babel-plugin-template-html-minifier:htth5ej4axq ' at 46:2. Ignoring.
+[babel-plugin-template-html-minifier] Could not minify CSS: Invalid character(s) 'babel-plugin-template-html-minifier:u2859ioxc ' at 46:2. Ignoring.
+[90m[[90mwebpackbar[90m][39m [32m√[39m Build: Compiled with some errors in 1.46m
+frontend-modern:
+  1425 assets
+  4697 modules
+
+  [1m[31mERROR[39m[22m in [1m./src/common/map/decorated_marker.ts[39m[22m [1m[32m2:38-44[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'Marker' (imported as 'Marker') was not found in 'leaflet' (module has no exports)
+     ╭─[2:37]
+   [2m1[0m │ import { Marker } from "leaflet";
+   [2m2[0m │ export class DecoratedMarker extends Marker {
+     · [35;1m                                     ──────[0m
+   [2m3[0m │   onAdd(map) {
+   [2m4[0m │     super.onAdd(map);
+     ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/components/ha-markdown-element.ts[39m[22m [1m[32m58:12-16[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'hash') was not found in 'object-hash' (module has no exports)
+      ╭─[58:11]
+   [2m56[0m │   }
+   [2m57[0m │   _computeCacheKey() {
+   [2m58[0m │     return hash({
+      · [35;1m           ────[0m
+   [2m59[0m │       content: this.content,
+   [2m60[0m │       allowSvg: this.allowSvg,
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/dialogs/image-cropper-dialog/image-cropper-dialog.ts[39m[22m [1m[32m40:27-34[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'Cropper') was not found in 'cropperjs' (module has no exports)
+      ╭─[40:26]
+   [2m38[0m │     if (!this._cropper) {
+   [2m39[0m │       this._image.src = URL.createObjectURL(this._params.file);
+   [2m40[0m │       this._cropper = new Cropper(this._image, {
+      · [35;1m                          ───────[0m
+   [2m41[0m │         aspectRatio: this._params.options.aspectRatio,
+   [2m42[0m │         viewMode: 1,
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/cards/hui-markdown-card.ts[39m[22m [1m[32m50:12-16[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'hash') was not found in 'object-hash' (module has no exports)
+      ╭─[50:11]
+   [2m48[0m │   }
+   [2m49[0m │   _computeCacheKey() {
+   [2m50[0m │     return hash(this._config);
+      · [35;1m           ────[0m
+   [2m51[0m │   }
+   [2m52[0m │   disconnectedCallback() {
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/badge-editor/hui-dialog-edit-badge.ts[39m[22m [1m[32m46:27-37[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[46:26]
+   [2m44[0m │     this.large = false;
+   [2m45[0m │     if (this._badgeConfig && !Object.isFrozen(this._badgeConfig)) {
+   [2m46[0m │       this._badgeConfig = deepFreeze(this._badgeConfig);
+      · [35;1m                          ──────────[0m
+   [2m47[0m │     }
+   [2m48[0m │   }
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/badge-editor/hui-dialog-edit-badge.ts[39m[22m [1m[32m115:25-35[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+       ╭─[115:24]
+   [2m113[0m │   }
+   [2m114[0m │   _handleConfigChanged(ev) {
+   [2m115[0m │     this._badgeConfig = deepFreeze(ev.detail.config);
+       · [35;1m                        ──────────[0m
+   [2m116[0m │     this._error = ev.detail.error;
+   [2m117[0m │     this._guiModeAvailable = ev.detail.guiModeAvailable;
+       ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/badge-editor/hui-dialog-suggest-badge.ts[39m[22m [1m[32m23:27-37[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[23:26]
+   [2m21[0m │     this._open = true;
+   [2m22[0m │     if (!Object.isFrozen(this._badgeConfig)) {
+   [2m23[0m │       this._badgeConfig = deepFreeze(this._badgeConfig);
+      · [35;1m                          ──────────[0m
+   [2m24[0m │     }
+   [2m25[0m │     if (this._yamlEditor) {
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-delete-card.ts[39m[22m [1m[32m17:26-36[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[17:25]
+   [2m15[0m │     this._open = true;
+   [2m16[0m │     if (!Object.isFrozen(this._cardConfig)) {
+   [2m17[0m │       this._cardConfig = deepFreeze(this._cardConfig);
+      · [35;1m                         ──────────[0m
+   [2m18[0m │     }
+   [2m19[0m │   }
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-edit-card.ts[39m[22m [1m[32m36:26-36[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[36:25]
+   [2m34[0m │     this.large = false;
+   [2m35[0m │     if (this._cardConfig && !Object.isFrozen(this._cardConfig)) {
+   [2m36[0m │       this._cardConfig = deepFreeze(this._cardConfig);
+      · [35;1m                         ──────────[0m
+   [2m37[0m │     }
+   [2m38[0m │   }
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-edit-card.ts[39m[22m [1m[32m101:24-34[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+       ╭─[101:23]
+   [2m 99[0m │   }
+   [2m100[0m │   _handleConfigChanged(ev) {
+   [2m101[0m │     this._cardConfig = deepFreeze(ev.detail.config);
+       · [35;1m                       ──────────[0m
+   [2m102[0m │     this._error = ev.detail.error;
+   [2m103[0m │     this._guiModeAvailable = ev.detail.guiModeAvailable;
+       ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-suggest-card.ts[39m[22m [1m[32m29:26-36[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[29:25]
+   [2m27[0m │     this._open = true;
+   [2m28[0m │     if (!Object.isFrozen(this._cardConfig)) {
+   [2m29[0m │       this._cardConfig = deepFreeze(this._cardConfig);
+      · [35;1m                         ──────────[0m
+   [2m30[0m │     }
+   [2m31[0m │     if (!Object.isFrozen(this._sectionConfig)) {
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-suggest-card.ts[39m[22m [1m[32m32:29-39[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[32:28]
+   [2m30[0m │     }
+   [2m31[0m │     if (!Object.isFrozen(this._sectionConfig)) {
+   [2m32[0m │       this._sectionConfig = deepFreeze(this._sectionConfig);
+      · [35;1m                            ──────────[0m
+   [2m33[0m │     }
+   [2m34[0m │     if (this._yamlEditor) {
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/ha-panel-lovelace.ts[39m[22m [1m[32m219:12-22[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+       ╭─[219:11]
+   [2m217[0m │   _checkLovelaceConfig(config) {
+   [2m218[0m │     const checkedConfig = checkLovelaceConfig(config);
+   [2m219[0m │     return deepFreeze(checkedConfig);
+       · [35;1m           ──────────[0m
+   [2m220[0m │   }
+   [2m221[0m │   _setLovelaceConfig(config, rawConfig, mode) {
+       ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/my/ha-panel-my.ts[39m[22m [1m[32m527:33-44[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'sanitizeUrl' (imported as 'sanitizeUrl') was not found in '@braintree/sanitize-url' (module has no exports)
+       ╭─[527:32]
+   [2m525[0m │     }
+   [2m526[0m │     if (type === "url") {
+   [2m527[0m │       return value && value === sanitizeUrl(value);
+       · [35;1m                                ───────────[0m
+   [2m528[0m │     }
+   [2m529[0m │     return false;
+       ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/resources/log-message.ts[39m[22m [1m[32m42:31-40[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'fromError' (imported as 'fromError') was not found in 'stacktrace-js' (module has no exports)
+      ╭─[42:30]
+   [2m40[0m │   if (error instanceof Error) {
+   [2m41[0m │     lines.push(error.toString() || messageFallback);
+   [2m42[0m │     const stackLines = (await fromError(error)).slice(0, MAX_STACK_FRAMES).map(frame => {
+      · [35;1m                              ─────────[0m
+   [2m43[0m │       frame.fileName ??= "";
+   [2m44[0m │       if (URL.canParse(frame.fileName)) {
+      ╰────
+  [0m
+
+  [1mfrontend-modern[39m[22m (Rspack 2.0.6) compiled with [1m[31m15 errors[39m[22m in 87.42 s
+
+frontend-legacy:
+  1451 assets
+  5129 modules
+
+  [1m[31mERROR[39m[22m in [1m./src/common/map/decorated_marker.ts[39m[22m [1m[32m2:38-44[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'Marker' (imported as 'Marker') was not found in 'leaflet' (module has no exports)
+     ╭─[2:37]
+   [2m1[0m │ import { Marker } from "leaflet";
+   [2m2[0m │ export class DecoratedMarker extends Marker {
+     · [35;1m                                     ──────[0m
+   [2m3[0m │   onAdd(map) {
+   [2m4[0m │     var _this$decorationLayer;
+     ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/common/util/xss.ts[39m[22m [1m[32m2:34-37[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'xss') was not found in 'xss' (module has no exports)
+     ╭─[2:33]
+   [2m1[0m │ import xss from "xss";
+   [2m2[0m │ export const filterXSS = html => xss(html, {
+     · [35;1m                                 ───[0m
+   [2m3[0m │   whiteList: {},
+   [2m4[0m │   stripIgnoreTag: true,
+     ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/components/ha-markdown-element.ts[39m[22m [1m[32m68:12-16[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'hash') was not found in 'object-hash' (module has no exports)
+      ╭─[68:11]
+   [2m66[0m │   }
+   [2m67[0m │   _computeCacheKey() {
+   [2m68[0m │     return hash({
+      · [35;1m           ────[0m
+   [2m69[0m │       content: this.content,
+   [2m70[0m │       allowSvg: this.allowSvg,
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/components/ha-qr-code.ts[39m[22m [1m[32m29:7-22[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'QRCode') was not found in 'qrcode' (module has no exports)
+      ╭─[29:6]
+   [2m27[0m │       const textHex = rgb2hex(textRgb.split(",").map(a => parseInt(a, 10)));
+   [2m28[0m │       const backgroundHex = rgb2hex(backgroundRgb.split(",").map(a => parseInt(a, 10)));
+   [2m29[0m │       QRCode.toCanvas(canvas, this.data, {
+      · [35;1m      ───────────────[0m
+   [2m30[0m │         errorCorrectionLevel: this.errorCorrectionLevel || (this.centerImage ? "Q" : "M"),
+   [2m31[0m │         width: this.width,
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/dialogs/image-cropper-dialog/image-cropper-dialog.ts[39m[22m [1m[32m51:27-34[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'Cropper') was not found in 'cropperjs' (module has no exports)
+      ╭─[51:26]
+   [2m49[0m │     if (!this._cropper) {
+   [2m50[0m │       this._image.src = URL.createObjectURL(this._params.file);
+   [2m51[0m │       this._cropper = new Cropper(this._image, {
+      · [35;1m                          ───────[0m
+   [2m52[0m │         aspectRatio: this._params.options.aspectRatio,
+   [2m53[0m │         viewMode: 1,
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/cards/hui-markdown-card.ts[39m[22m [1m[32m61:12-16[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'hash') was not found in 'object-hash' (module has no exports)
+      ╭─[61:11]
+   [2m59[0m │   }
+   [2m60[0m │   _computeCacheKey() {
+   [2m61[0m │     return hash(this._config);
+      · [35;1m           ────[0m
+   [2m62[0m │   }
+   [2m63[0m │   disconnectedCallback() {
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/badge-editor/hui-dialog-edit-badge.ts[39m[22m [1m[32m57:27-37[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[57:26]
+   [2m55[0m │     this.large = false;
+   [2m56[0m │     if (this._badgeConfig && !Object.isFrozen(this._badgeConfig)) {
+   [2m57[0m │       this._badgeConfig = deepFreeze(this._badgeConfig);
+      · [35;1m                          ──────────[0m
+   [2m58[0m │     }
+   [2m59[0m │   }
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/badge-editor/hui-dialog-edit-badge.ts[39m[22m [1m[32m127:25-35[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+       ╭─[127:24]
+   [2m125[0m │   }
+   [2m126[0m │   _handleConfigChanged(ev) {
+   [2m127[0m │     this._badgeConfig = deepFreeze(ev.detail.config);
+       · [35;1m                        ──────────[0m
+   [2m128[0m │     this._error = ev.detail.error;
+   [2m129[0m │     this._guiModeAvailable = ev.detail.guiModeAvailable;
+       ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/badge-editor/hui-dialog-suggest-badge.ts[39m[22m [1m[32m32:27-37[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[32:26]
+   [2m30[0m │     this._open = true;
+   [2m31[0m │     if (!Object.isFrozen(this._badgeConfig)) {
+   [2m32[0m │       this._badgeConfig = deepFreeze(this._badgeConfig);
+      · [35;1m                          ──────────[0m
+   [2m33[0m │     }
+   [2m34[0m │     if (this._yamlEditor) {
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-delete-card.ts[39m[22m [1m[32m23:26-36[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[23:25]
+   [2m21[0m │     this._open = true;
+   [2m22[0m │     if (!Object.isFrozen(this._cardConfig)) {
+   [2m23[0m │       this._cardConfig = deepFreeze(this._cardConfig);
+      · [35;1m                         ──────────[0m
+   [2m24[0m │     }
+   [2m25[0m │   }
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-edit-card.ts[39m[22m [1m[32m49:26-36[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[49:25]
+   [2m47[0m │     this.large = false;
+   [2m48[0m │     if (this._cardConfig && !Object.isFrozen(this._cardConfig)) {
+   [2m49[0m │       this._cardConfig = deepFreeze(this._cardConfig);
+      · [35;1m                         ──────────[0m
+   [2m50[0m │     }
+   [2m51[0m │   }
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-edit-card.ts[39m[22m [1m[32m115:24-34[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+       ╭─[115:23]
+   [2m113[0m │   }
+   [2m114[0m │   _handleConfigChanged(ev) {
+   [2m115[0m │     this._cardConfig = deepFreeze(ev.detail.config);
+       · [35;1m                       ──────────[0m
+   [2m116[0m │     this._error = ev.detail.error;
+   [2m117[0m │     this._guiModeAvailable = ev.detail.guiModeAvailable;
+       ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-suggest-card.ts[39m[22m [1m[32m40:26-36[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[40:25]
+   [2m38[0m │     this._open = true;
+   [2m39[0m │     if (!Object.isFrozen(this._cardConfig)) {
+   [2m40[0m │       this._cardConfig = deepFreeze(this._cardConfig);
+      · [35;1m                         ──────────[0m
+   [2m41[0m │     }
+   [2m42[0m │     if (!Object.isFrozen(this._sectionConfig)) {
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/editor/card-editor/hui-dialog-suggest-card.ts[39m[22m [1m[32m43:29-39[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+      ╭─[43:28]
+   [2m41[0m │     }
+   [2m42[0m │     if (!Object.isFrozen(this._sectionConfig)) {
+   [2m43[0m │       this._sectionConfig = deepFreeze(this._sectionConfig);
+      · [35;1m                            ──────────[0m
+   [2m44[0m │     }
+   [2m45[0m │     if (this._yamlEditor) {
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/lovelace/ha-panel-lovelace.ts[39m[22m [1m[32m229:12-22[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'default' (imported as 'deepFreeze') was not found in 'deep-freeze' (module has no exports)
+       ╭─[229:11]
+   [2m227[0m │   _checkLovelaceConfig(config) {
+   [2m228[0m │     const checkedConfig = checkLovelaceConfig(config);
+   [2m229[0m │     return deepFreeze(checkedConfig);
+       · [35;1m           ──────────[0m
+   [2m230[0m │   }
+   [2m231[0m │   _setLovelaceConfig(config, rawConfig, mode) {
+       ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/panels/my/ha-panel-my.ts[39m[22m [1m[32m539:33-44[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'sanitizeUrl' (imported as 'sanitizeUrl') was not found in '@braintree/sanitize-url' (module has no exports)
+       ╭─[539:32]
+   [2m537[0m │     }
+   [2m538[0m │     if (type === "url") {
+   [2m539[0m │       return value && value === sanitizeUrl(value);
+       · [35;1m                                ───────────[0m
+   [2m540[0m │     }
+   [2m541[0m │     return false;
+       ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/resources/log-message.ts[39m[22m [1m[32m54:31-40[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'fromError' (imported as 'fromError') was not found in 'stacktrace-js' (module has no exports)
+      ╭─[54:30]
+   [2m52[0m │   if (error instanceof Error) {
+   [2m53[0m │     lines.push(error.toString() || messageFallback);
+   [2m54[0m │     const stackLines = (await fromError(error)).slice(0, MAX_STACK_FRAMES).map(frame => {
+      · [35;1m                              ─────────[0m
+   [2m55[0m │       var _frame$fileName;
+   [2m56[0m │       (_frame$fileName = frame.fileName) !== null && _frame$fileName !== void 0 ? _frame$fileName : frame.fileName = "";
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/resources/markdown-worker.ts[39m[22m [1m[32m14:55-74[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'getDefaultWhiteList' (imported as 'getDefaultWhiteList') was not found in 'xss' (module has no exports)
+      ╭─[14:54]
+   [2m12[0m │   if (!whiteListNormal) {
+   [2m13[0m │     var _getDefaultWhiteList$;
+   [2m14[0m │     whiteListNormal = Object.assign(Object.assign({}, getDefaultWhiteList()), {}, {
+      · [35;1m                                                      ───────────────────[0m
+   [2m15[0m │       table: [...((_getDefaultWhiteList$ = getDefaultWhiteList().table) !== null && _getDefaultWhiteList$ !== void 0 ? _getDefaultWhiteList$ : []), "role"],
+   [2m16[0m │       input: ["type", "disabled", "checked"],
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/resources/markdown-worker.ts[39m[22m [1m[32m15:44-63[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'getDefaultWhiteList' (imported as 'getDefaultWhiteList') was not found in 'xss' (module has no exports)
+      ╭─[15:43]
+   [2m13[0m │     var _getDefaultWhiteList$;
+   [2m14[0m │     whiteListNormal = Object.assign(Object.assign({}, getDefaultWhiteList()), {}, {
+   [2m15[0m │       table: [...((_getDefaultWhiteList$ = getDefaultWhiteList().table) !== null && _getDefaultWhiteList$ !== void 0 ? _getDefaultWhiteList$ : []), "role"],
+      · [35;1m                                           ───────────────────[0m
+   [2m16[0m │       input: ["type", "disabled", "checked"],
+   [2m17[0m │       "ha-icon": ["icon"],
+      ╰────
+  [0m
+
+  [1m[31mERROR[39m[22m in [1m./src/resources/markdown-worker.ts[39m[22m [1m[32m52:30-39[39m[22m
+    [31m×[0m ESModulesLinkingError: export 'filterXSS' (imported as 'filterXSS') was not found in 'xss' (module has no exports)
+      ╭─[52:29]
+   [2m50[0m │   });
+   [2m51[0m │   const tokens = marked.lexer(content);
+   [2m52[0m │   return tokens.map(token => filterXSS(marked.parser([token]), {
+      · [35;1m                             ─────────[0m
+   [2m53[0m │     whiteList,
+   [2m54[0m │     onTagAttr: (tag, name, value) => {
+      ╰────
+  [0m
+
+  [1mfrontend-legacy[39m[22m (Rspack 2.0.6) compiled with [1m[31m20 errors[39m[22m in 87.42 s
+[16:26:53] Build done @ 4:26:53 PM
+[16:26:53] Finished 'rspack-prod-app' after 1.47 min
+[16:26:53] Starting 'gen-pages-app-prod'...
+[16:26:53] Starting 'gen-service-worker-app-prod'...
+[16:26:53] 'gen-pages-app-prod' errored after 860 μs
+[16:26:53] Error: C:\Ha-test\frontend\hass_frontend\frontend_latest\manifest.json: ENOENT: no such file or directory, open 'C:\Ha-test\frontend\hass_frontend\frontend_latest\manifest.json'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at Object.readFileSync (C:\Ha-test\frontend\node_modules\jsonfile\index.js:50:22)
+    at file:///C:/Ha-test/frontend/build-scripts/gulp/entry-html.js:137:31
+    at taskWrapper (C:\Ha-test\frontend\node_modules\undertaker\lib\set-task.js:13:15)
+    at bound (node:domain:433:15)
+    at runBound (node:domain:444:12)
+    at asyncRunner (C:\Ha-test\frontend\node_modules\async-done\index.js:52:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[16:26:53] 'build-app' errored after 1.52 min

@@ -47,10 +47,10 @@ class OnboardingWelcome extends LitElement {
               "ui.panel.page-onboarding.restore.options.upload_description"
             )}
           </div>
-          <ha-icon-button-next slot="end"></ha-icon-button-next>
-        </ha-md-list-item>
-        <ha-md-list-item type="button" @click=${this._restoreBackupCloud}>
-          <div slot="headline">Home Assistant Cloud</div>
+          <ha-icon-next slot="end"></ha-icon-next>
+        </ha-list-item-button>
+        <ha-list-item-button @click=${this._restoreBackupCloud}>
+          <div slot="headline">Eko Energis EMS Cloud</div>
           <div slot="supporting-text">
             ${this.localize(
               "ui.panel.page-onboarding.restore.ha-cloud.description"
